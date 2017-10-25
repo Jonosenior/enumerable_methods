@@ -123,10 +123,3 @@ end
 # def multiply_els(array)
 #   array.my_inject(1) {|running_total, element| running_total * element}
 # end
-
-
-
-
-
-array = [1, 2, 3, 4, 5]
-my_array.my_each_with_index { |element, index| puts "#{element} and #{index}" }

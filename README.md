@@ -4,6 +4,8 @@ These are my own versions of various Ruby iterator methods in the [Enumerator mo
 
 Specifically, this project includes my versions of #each, #each_with_index, #select, #all?, #any?, #none?, #count, #map (#collect) and #inject (#reduce).
 
+This is a project from [The Odin Project](https://www.theodinproject.com/courses/ruby-programming/lessons/advanced-building-blocks).
+
 ## Installation
 
 <!-- Open your terminal/command line. Navigate to the directory where you want this project to live. Type:

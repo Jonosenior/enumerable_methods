@@ -8,12 +8,14 @@ This is a project from [The Odin Project](https://www.theodinproject.com/courses
 
 ## Installation
 
-<!-- Open your terminal/command line. Navigate to the directory where you want this project to live. Type:
+Open your terminal/command line. Navigate to the directory where you want this project to live. Type:
 ```
 $ git clone https://github.com/JonoSenior/enumerator_methods.git
-$ cd bubble_sort
-$ ruby bubble_sort.rb
-``` -->
+$ irb
+$ require './enumerator_methods.rb'
+``` 
+You will now be able to use these methods in your irb session.
+
 ## Pre-project thoughts and motivations
 
 The aim of this project is to better understand how to use blocks and procs, and also to deepen my understanding of what it is that iterator methods are doing behind the scenes - to show they're not magic black boxes.

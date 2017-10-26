@@ -22,17 +22,20 @@ end
 module Enumerable
   def my_select
     answer = {} if self.class == Hash
-    answer = [] if self.class == Array
-    self.my_each do |element, value|
-      #answer.push(element) if yield(element) != false
-      answer << (element) if (yield(element) != false) && (self.class == Array)
-      if (yield(element, value) != false) && (self.class == Hash)
-        answer[element] = value
+    answer = [] if self.class == Array || self.class == Range
+    if self.class == Array || self.class == Range
+      self.my_each do |element|
+        answer << element if yield(element)
+      end
+    elsif self.class == Hash
+      for key, value in self
+        answer[key] = value if (yield(key, value))
       end
     end
     answer
   end
 end
+
 
 
 module Enumerable
@@ -69,20 +72,19 @@ module Enumerable
     count = 0
     self.my_each do |element|
       if !block_given?
-        # puts "no block"
-        # puts "arg1: #{arg1.join("")} element: #{element}"
-        count +=1 if element == arg1.join("").to_i
+        count +=1 if element == arg1.first
       else
         count += 1 if yield(element)
-        # puts "block present"
       end
     end
     count
   end
 end
 
+
+
 module Enumerable
-  def my_map
+  def my_map_block_only
     new_object = []
     self.my_each do |element|
       new_object.push(yield element)
@@ -94,11 +96,11 @@ end
 # Same as above, but can take either a proc or a block
 
 module Enumerable
-  def my_map(someProc = nil)
+  def my_map(some_arg = nil)
     new_object = []
-    if someProc.class == Proc
+    if some_arg.class == Proc
       self.my_each do |element|
-        new_object.push(someProc.call(element))
+        new_object.push(some_arg.call(element))
       end
     else
       self.my_each do |element|
@@ -119,7 +121,3 @@ module Enumerable
     running_total
   end
 end
-
-# def multiply_els(array)
-#   array.my_inject(1) {|running_total, element| running_total * element}
-# end

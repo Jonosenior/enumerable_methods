@@ -10,7 +10,7 @@ This is a project from [The Odin Project](https://www.theodinproject.com/courses
 
 Open your terminal/command line. Navigate to the directory where you want this project to live. Type:
 ```
-$ git clone https://github.com/JonoSenior/enumerator_methods.git
+$ git clone https://github.com/JonoSenior/enumerable_methods.git
 $ irb
 $ require './enumerable_methods.rb'
 ``` 

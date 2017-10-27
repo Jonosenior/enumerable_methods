@@ -12,7 +12,7 @@ Open your terminal/command line. Navigate to the directory where you want this p
 ```
 $ git clone https://github.com/JonoSenior/enumerator_methods.git
 $ irb
-$ require './enumerator_methods.rb'
+$ require './enumerable_methods.rb'
 ``` 
 You will now be able to use these methods in your irb session.
 
